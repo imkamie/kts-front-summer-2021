@@ -4,7 +4,21 @@ export type GetOrganizationReposListParams = {
     organizationName: string;
 }
 
-export type RepoItem = {};
+export type GitHubRepoOwner = {
+    id: number;
+    url: string;
+    avatar_url: string;
+    login: string;
+}
+
+export type RepoItem = {
+    id: number;
+    url: string;
+    name: string;
+    stargazers_count: number;
+    owner: GitHubRepoOwner;
+
+};
 
 /** Интерфейс класса для работы с GitHub API
  * названия getOrganizationReposList

@@ -12,7 +12,7 @@ export default class ApiStore implements IApiStore {
         try {
             let endpoint = `${this.baseUrl}${params.endpoint}`;
             let body = null;
-            const headers = { ... params.headers};
+            const headers = { ...params.headers};
             
             if (params.method === HTTPMethod.GET) {
                 endpoint = `${endpoint}?${qs.stringify(params.data)}`;
